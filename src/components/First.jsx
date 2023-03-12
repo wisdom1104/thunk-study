@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { __addNumber, __minusNumber } from "./redux/modules/counterSlice";
+import { __addNumber, __minusNumber } from "../redux/modules/counterSlice";
 
-const App = () => {
+function First() {
   const dispatch = useDispatch();
   const [number, setNumber] = useState(0);
   const globalNumber = useSelector((state) => state.counter.number);
@@ -31,6 +31,6 @@ const App = () => {
       <button onClick={onClickMinusNumberHandler}>빼기</button>
     </div>
   );
-};
+}
 
-export default App;
+export default First;
